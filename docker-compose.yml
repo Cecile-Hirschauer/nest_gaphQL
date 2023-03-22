@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  docker_pg:
+    container_name: pg_docker
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: typegraphql-example
+    ports:
+      - "5432:5432"
